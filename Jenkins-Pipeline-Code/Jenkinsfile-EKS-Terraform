@@ -48,7 +48,7 @@ pipeline {
         }
         stage('Terraform Action') {
             steps {
-                withAWS(credentials: 'aws-key', region: 'us-east-1') {
+                withAWS(credentials: 'aws-key', region: 'ap-southeast-1') {
                 script {
                     echo "${params.'Terraform-Action'}"
                     dir('EKS-TF') {
